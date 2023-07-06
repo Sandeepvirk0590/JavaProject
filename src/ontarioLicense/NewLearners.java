@@ -20,6 +20,10 @@ public class NewLearners {
 		else if (currentlevel.equalsIgnoreCase("G2")) {
 			System.out.println("The current level is G2 and eligible to apply for G");
 		}
+		
+		else if (currentlevel.equalsIgnoreCase("G")) {
+			System.out.println("The current level is G and You are fully licensed");
+		}
 
 		else {
 			System.out.println("The age is not valid to apply for licence");
