@@ -12,6 +12,7 @@ public class SharingCode {
 		
 
 		sc.addTheseNumbers();
+		sc.subtractTheseNumbers();
 	}
 
 }
