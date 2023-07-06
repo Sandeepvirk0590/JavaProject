@@ -8,6 +8,7 @@ public class MobileMain {
 	public static void main (String [] args) {
 		MobilePhone iPhone = new MobilePhone();
 		
+		//Adding a comment
 		//Assigning values to the variables
 		iPhone.brandName = "IPhone";
 		iPhone.modelNumber="12";
