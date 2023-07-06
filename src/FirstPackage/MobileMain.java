@@ -1,4 +1,4 @@
-package FirstPackage;
+package firstPackage;
 
 public class MobileMain {
 	
