@@ -3,13 +3,14 @@ package assignmentLoop;
 public class TotalCapacity {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 
+		// Creating instance of a class
 		BucketCapacity overflow = new BucketCapacity();
 
+		// Assigning values to the variables
 		overflow.bucket = 10;
-		overflow.waterTank = 150;
 
+		// Invoking the method
 		overflow.fillTankByBucket();
 
 	}

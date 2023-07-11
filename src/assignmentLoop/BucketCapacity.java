@@ -5,11 +5,11 @@ public class BucketCapacity {
 	int waterTank;
 
 	void fillTankByBucket() {
-		while (bucket <= waterTank) {
+		while (bucket <= 90) {
 			System.out.println("The water tank is filled upto " + bucket + "litres");
 			bucket += 10;
 
-			if (bucket == 110) {
+			if (bucket == 100) {
 
 				System.out.println("The water is stopped from overflowing");
 				break;
