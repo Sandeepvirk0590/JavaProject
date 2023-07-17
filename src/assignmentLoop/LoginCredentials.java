@@ -1,7 +1,5 @@
 package assignmentLoop;
 
-import java.util.Scanner;
-
 public class LoginCredentials {
 
 	public static void main(String[] args) {

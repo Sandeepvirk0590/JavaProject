@@ -23,7 +23,7 @@ public class LoginApplication {
 			System.out.println("Enter Password");
 			password = sc.next();
 
-			if (username.equalsIgnoreCase("pivotAdmin") && (password.equalsIgnoreCase("Admin123"))) {
+			if (username.equalsIgnoreCase("pivotAdmin") && (password.equalsIgnoreCase("admin123"))) {
 				System.out.println("You are logged in to the application");
 				break;
 			} else {
