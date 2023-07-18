@@ -5,61 +5,100 @@ import java.util.Scanner;
 import java.util.Arrays;
 
 public class TopBrands {
-	
-	String[] Samsung = new String[4];
-	String[] Google = new String[4];
-	String[] Apple = new String[4];
-	
+
+	String[] samsung = new String[4];
+	String[] google = new String[4];
+	String[] apple = new String[4];
+	String[] brandSelected = new String[4];
+    String availableProducts;
+	String enteredBrandName;
+	boolean productIsPresent = false;
+
 	void populateBrandProducts() {
-		Samsung[0] = "S20";
-		Samsung[1] = "S21";
-		Samsung[2] = "Flip3";
-		Samsung[3] = "Fold3";
-		
-		Google [0] = "Google Pixel 6";
-		Google [1] = "Google Pixel 6 Pro";
-		Google [2] = "Google Pixel Pro";
-		Google [3] = "Google Pixel 5";
-		
-		Apple [0] = "Iphone12";
-		Apple [1] = "Iphone12 mini";
-		Apple [2] = "Iphone 11";
-		Apple [3] = "Iphone 11";
-		
-		System.out.println("The different products available in Samsung are " +Arrays.toString(Samsung));
-		System.out.println("The different products available in Google are " +Arrays.toString(Google));
-		System.out.println("The different products available in Apple are " +Arrays.toString(Apple));
+		samsung[0] = "S20";
+		samsung[1] = "S21";
+		samsung[2] = "Flip3";
+		samsung[3] = "Fold3";
+
+		google[0] = "Google Pixel 6";
+		google[1] = "Google Pixel 6 Pro";
+		google[2] = "Google Pixel Pro";
+		google[3] = "Google Pixel 5";
+
+		apple[0] = "Iphone12";
+		apple[1] = "Iphone12 mini";
+		apple[2] = "Iphone 11";
+		apple[3] = "Iphone 11";
+
+		System.out.println("The different products available in Samsung are " + Arrays.toString(samsung));
+		System.out.println("The different products available in Google are " + Arrays.toString(google));
+		System.out.println("The different products available in Apple are " + Arrays.toString(apple));
 
 	}
 
 	void availableBrandProducts() {
 		Scanner sc = new Scanner(System.in);
-	
-		System.out.println("Enter the product Name");
-		
-	        for (int i=0; i<Samsung.length; i++)
-	        for (int j=0; j<Google.length; j++)
-	        for (int n=0; n<Apple.length; n++){
-	        
-		        String enteredName = sc.next();
 
-			if (enteredName.equals("Samsung")) {
-				System.out.println("product selected is :" +enteredName);
-			}
-	        
+		System.out.println("Enter the Brand Name from the following list");
 
-			else if (enteredName.equals("Google")){
-				System.out.println("product selected is :" +enteredName);
-			}
+		System.out.println("Samsung");
+		System.out.println("Google");
+		System.out.println("Apple");
+		enteredBrandName = sc.next();
+
+		System.out.println("Now please enter a product name from the " + enteredBrandName);
+
 		
 
-			else if (enteredName.equals("Apple")){
-				System.out.println("product selected is :" +enteredName);
-			}
+		switch (availableProducts) {
+
+		case "samsung":
 			
-			else {
-				System.out.println("Please select a product from the list");
-			}		
-    }	
+			for (int i = 0; i < samsung.length; i++) {
+				availableProducts = sc.next();
+				if (enteredBrandName.equalsIgnoreCase("samsung[i]")) {
+					System.out.println("product selected is :" + availableProducts);
+					productIsPresent = true;
+				}
+				if (productIsPresent = false) {
+					System.out.println("Please select a product from the list");
+				}
+			break;
+			}
+
+		case "google":
+
+			for (int i = 0; i < google.length; i++) {
+				availableProducts = sc.next();
+				if (availableProducts.equalsIgnoreCase("google[i]")) {
+					System.out.println("product selected is :" + availableProducts);
+					productIsPresent = true;
+				}
+				if (productIsPresent = false) {
+					System.out.println("Please select a product from the list");
+				}
+
+			break;
+			}
+
+		case "apple":
+
+			for (int i = 0; i < apple.length; i++) {
+				availableProducts = sc.next();
+				if (availableProducts.equalsIgnoreCase("apple[i]")) {
+					System.out.println("product selected is :" + availableProducts);
+					productIsPresent = true;
+				}
+				if (productIsPresent = false) {
+					System.out.println("Please select a product from the list");
+				}
+				break;
+			}
+
+		default:
+			System.out.println("Please select a product from the list");
+		}
+
 	}
+
 }
